@@ -10,6 +10,7 @@ module.exports = async ({
     const { deployer } = await getNamedAccounts()
     const chainId = await getChainId()
     let ethUsdPriceFeedAddress
+
     if (chainId == 31337) {
         const EthUsdAggregator = await deployments.get('EthUsdAggregator')
         ethUsdPriceFeedAddress = EthUsdAggregator.address
@@ -30,4 +31,4 @@ module.exports = async ({
 
 }
 
-module.exports.tags = ['all', 'feed', 'main']
+module.exports.tags = ['ball', 'feed', 'main']
